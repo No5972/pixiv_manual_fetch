@@ -28,11 +28,7 @@ jobs:
       - name: 'Working'
         run: |
           python ./scripts/get_single_pic.py
-      - name: Upload to this repo
-        uses: github-actions-x/commit@v2.8
+      - name: Push to master
+        uses: tcitry/push-to-master@v1.0
         with:
-          github-token: ${{ secrets.PERSONAL_TOKEN }}
-          commit-message: 'Fetch Picture'
-          push-branch: 'main'
-          force-add: 'true'
-          files: '.'
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}

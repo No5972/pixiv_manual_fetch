@@ -1,0 +1,38 @@
+name: "Get Picture"
+
+# Controls when the action will run. 
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      # Runs a single command using the runners shell
+      - name: 'Set up Python'
+        uses: actions/setup-python@v1
+        with:
+           python-version: 3.7
+      - name: 'Install requirements'
+        run: pip install -r ./scripts/requirements.txt
+      - name: 'Working'
+        run: |
+          python ./scripts/get_single_pic.py
+      - name: Upload to this repo
+        run: |
+          git pull origin master
+          git config --global user.name "No5972" # Change to your GitHub user name
+          git config --global user.email "wujiuqier@foxmail.com" # Change to your GitHub email address
+          git add . && echo "Git Added" # Guess if there are any other types of pictures - Ref: https://stackoverflow.com/questions/25083290/git-add-error-unknown-switch
+          git commit -m 'Fetch Picture' && echo "Git Committed"
+          git push -u origin main && echo "Git Pushed Origin" # Change to your branch to place crawled pictures

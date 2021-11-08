@@ -1,4 +1,4 @@
-# pixiv_manual_fetch
+# Pixiv Manual Fetch
 Search and download Pixiv pictures using GitHub Actions
 
 Usage:
@@ -9,6 +9,6 @@ Usage:
 5. Go to generated HTML file and find the same string of the author or the title. Find the artwork ID nearby.
 6. Specify artwork ID in ```/scripts/get_single_pic.py```
 7. Run action workflow "Get Picture"
-8. Check out and download the picture you get from the workflow.
+8. Check out and download the picture you get from the workflow
 
-The sample picture is the artwork by myself.
+The sample picture artwork 93990138 is the artwork by myself. 😜

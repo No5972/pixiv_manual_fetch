@@ -29,10 +29,10 @@ jobs:
         run: |
           python ./scripts/get_single_pic.py
       - name: Upload to this rep
-        uses: dsayling/commit-branch-check-action@v0.0.8
-        with:
-          github-token: ${{ secrets.PERSONEL_TOKEN }}
-          commit-message: "Fetch Picture"
-          # dest-branch: main
-          verify-checks: true
-          delete-after-checks: true
+        run: |
+          git pull origin master
+          git config --global user.name "github-actions" # Change to your GitHub user name
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com" # Change to your GitHub email address
+          git add . && echo "Git Added" # Guess if there are any other types of pictures - Ref: https://stackoverflow.com/questions/25083290/git-add-error-unknown-switch
+          git commit -m 'Fetch Picture' && echo "Git Committed"
+          git push -u origin main && echo "Git Pushed Origin" # Change to your branch to place crawled pictures

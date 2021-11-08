@@ -9,5 +9,5 @@ Usage:
 5. Go to Actions -> Get Picture -> Run workflow, and enter the artwork ID, and run workflow
 6. Check out and download the picture you get from the workflow
 
-The sample picture artwork [93990138](https://www.pixiv.net/en/artworks/93990138/) is my very first artwork submitted to Pixiv. 😜
+The sample picture artwork [93990138](https://www.pixiv.net/en/artworks/93990138/) is my very first artwork submitted to Pixiv. (Just a copy draw...) 😜
 [![93990138](93990138_%5BCOPY1DRAW%5D1Hello1World-by-No.5972.png)](https://www.pixiv.net/en/artworks/93990138/)

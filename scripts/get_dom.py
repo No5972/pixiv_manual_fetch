@@ -4,13 +4,14 @@ from urllib.parse import urlencode
 from urllib.parse import quote
 from time import sleep
 import os
+import sys
 
 # Author Page: https://www.pixiv.net/en/users/32490359/artworks?p=1
 # Search Page: https://www.pixiv.net/en/tags/keywords/illustrations?s_mode=s_tag&p=1
 
 # Specify these directly in the file
-page = '1'
-query = quote('バトルスーツ')
+page = sys.argv[1]
+query = quote(sys.argv[2])
 
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument('--headless')

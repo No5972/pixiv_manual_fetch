@@ -11,8 +11,8 @@ headers = {
 path = './'
 repeat = 1
 repeat_user_name = 1
-artwork_id = '93990138' # Specify this in the file directly
-# artwork_id = sys.argv[1]
+# artwork_id = '93990138'
+artwork_id = sys.argv[1]
 
 
 def getSinglePic(url):

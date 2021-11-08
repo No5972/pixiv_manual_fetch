@@ -29,10 +29,9 @@ jobs:
         run: |
           python ./scripts/get_single_pic.py
       - name: Upload to this repo
-        run: |
-          git pull origin main
-          git config --global user.name "No5972" # Change to your GitHub user name
-          git config --global user.email "wujiuqier@foxmail.com" # Change to your GitHub email address
-          git add . && echo "Git Added" # Guess if there are any other types of pictures - Ref: https://stackoverflow.com/questions/25083290/git-add-error-unknown-switch
-          git commit -m 'Fetch Picture' && echo "Git Committed"
-          git push -u origin main && echo "Git Pushed Origin" # Change to your branch to place crawled pictures
+        uses: ad-m/github-push-action@master
+        with:
+          directory: .
+          github_token: ${{ secrets.PERSONAL_TOKEN }}
+          branch: main
+          force: true

@@ -29,12 +29,12 @@ jobs:
         run: |
           sudo cp -p ./chrome/chromedriver /usr/bin/
           chmod -R 777 /usr/bin/chromedriver
-          python ./Spider/test.py
+          python ./scripts/test.py
       - name: Upload to this repo
         run: |
-          git pull origin master
+          git pull origin main
           git config --global user.name "No5972" # Change to your GitHub user name
           git config --global user.email "wujiuqier@foxmail.com" # Change to your GitHub email address
-          git add "*.html" && echo "Git Added" # Guess if there are any other types of pictures - Ref: https://stackoverflow.com/questions/25083290/git-add-error-unknown-switch
+          git add . && echo "Git Added" # Guess if there are any other types of pictures - Ref: https://stackoverflow.com/questions/25083290/git-add-error-unknown-switch
           git commit -m 'Fetch HTML DOM' && echo "Git Committed"
-          git push -u origin master && echo "Git Pushed Origin" # Change to your branch to place crawled pictures
+          git push -u origin main && echo "Git Pushed Origin" # Change to your branch to place crawled pictures

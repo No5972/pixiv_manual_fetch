@@ -28,7 +28,11 @@ jobs:
       - name: 'Working'
         run: |
           python ./scripts/get_single_pic.py
-      - name: Push to master
-        uses: tcitry/push-to-master@v1.0
+      - name: Upload to this rep
+        uses: dsayling/commit-branch-check-action@v0.0.8
         with:
-          GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+          github-token: ${{ secrets.PERSONEL_TOKEN }}
+          commit-message: "Fetch Picture"
+          dest-branch: main
+          verify-checks: true
+          delete-after-checks: true

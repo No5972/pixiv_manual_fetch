@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from urllib.parse import urlencode
 from urllib.parse import quote
+from time import sleep
 import os
 
 # Author Page: https://www.pixiv.net/en/users/32490359/artworks?p=1

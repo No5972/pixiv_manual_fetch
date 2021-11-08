@@ -31,7 +31,6 @@ jobs:
       - name: Upload to this repo
         uses: ad-m/github-push-action@master
         with:
-          directory: .
           github_token: ${{ secrets.PERSONAL_TOKEN }}
           branch: main
           force: true

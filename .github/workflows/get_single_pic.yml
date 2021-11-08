@@ -35,4 +35,4 @@ jobs:
           commit-message: 'Fetch Picture'
           push-branch: 'main'
           force-add: 'true'
-          files: '*.jpg *.png'
+          files: '.'

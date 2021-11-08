@@ -10,8 +10,8 @@ import sys
 # Search Page: https://www.pixiv.net/en/tags/keywords/illustrations?s_mode=s_tag&p=1
 
 # Specify these directly in the file
-page = sys.argv[1]
-query = quote(sys.argv[2])
+page = sys.argv[2]
+query = quote(sys.argv[1])
 
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument('--headless')

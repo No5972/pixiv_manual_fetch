@@ -33,6 +33,6 @@ jobs:
         with:
           github-token: ${{ secrets.PERSONEL_TOKEN }}
           commit-message: "Fetch Picture"
-          dest-branch: main
+          # dest-branch: main
           verify-checks: true
           delete-after-checks: true

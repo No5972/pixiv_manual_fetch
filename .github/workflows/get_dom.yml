@@ -4,6 +4,13 @@ name: "Get Search Result"
 on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+    inputs:
+      keyword: 
+        description: 'Key Word'
+        required: true
+      page:
+        description: 'Page No.'
+        required: true
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -29,7 +36,7 @@ jobs:
         run: |
           sudo cp -p ./chrome/chromedriver /usr/bin/
           chmod -R 777 /usr/bin/chromedriver
-          python ./scripts/get_dom.py
+          python ./scripts/get_dom.py ${{ github.event.inputs.keyword }} ${{ github.event.inputs.page }}
       - name: Upload to this repo
         run: |
           git pull origin main

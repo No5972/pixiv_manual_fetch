@@ -10,3 +10,5 @@ Usage:
 6. Specify artwork ID in ```/scripts/get_single_pic.py```
 7. Run action workflow "Get Picture"
 8. Check out and download the picture you get from the workflow.
+
+The sample picture is the artwork by myself.
